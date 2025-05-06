@@ -76,6 +76,6 @@ document.addEventListener("DOMContentLoaded", function () {
             email: emailInput.value,
             result
         };
-        window.location.href = `result.html?name=${encodeURIComponent(nameInput.value)}&result=${encodeURIComponent(result)}`;
+        window.location.href = `https://oguzhanunc.github.io/kisilik-testi/result.html?name=${encodeURIComponent(nameInput.value)}&result=${encodeURIComponent(result)}`;
     });
 });
