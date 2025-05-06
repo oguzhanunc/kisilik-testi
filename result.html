@@ -1,33 +1,31 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Test Sonucu</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <title>Test Sonucu</title>
 </head>
 <body>
-  <div class="container" id="resultContainer">
-    <h2>Sonuç</h2>
-    <div id="result"></div>
-    <a href="index.html" class="start-button">Ana Sayfaya Dön</a>
-  </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get("name");
+        const result = params.get("result");
 
-  <script>
-    // localStorage'tan sonucu al
-    const resultData = JSON.parse(localStorage.getItem("testResult"));
-
-    // Eğer sonuç varsa, sonucu göster
-    if (resultData) {
-      document.getElementById("result").innerHTML = `
-        <div style="text-align: center;">
-          <h3>${resultData.emoji} En baskın kişilik özelliğiniz: <strong>${resultData.label}</strong></h3>
-          <p>${resultData.description}</p>
-        </div>
-      `;
-    } else {
-      document.getElementById("result").innerHTML = "<p>Sonuç bulunamadı. Lütfen testi tekrar yapınız.</p>";
-    }
-  </script>
+        if (name && result) {
+            document.body.innerHTML = `
+                <h1>Merhaba ${name},</h1>
+                <p>Kişilik testinin sonucu:</p>
+                <h2>${result}</h2>
+            `;
+        } else {
+            document.body.innerHTML = `
+                <h1>Sonuç bulunamadı</h1>
+                <p>Lütfen testi tamamlayıp tekrar deneyiniz.</p>
+                <a href="quiz.html">Teste dön</a>
+            `;
+        }
+    });
+    </script>
 </body>
 </html>
