@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Test Sonucu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container" id="resultContainer">
+    <h2>Sonuç</h2>
+    <div id="result"></div>
+    <a href="index.html" class="start-button">Ana Sayfaya Dön</a>
+  </div>
+
+  <script>
+    // localStorage'tan sonucu al
+    const resultData = JSON.parse(localStorage.getItem("testResult"));
+
+    // Eğer sonuç varsa, sonucu göster
+    if (resultData) {
+      document.getElementById("result").innerHTML = `
+        <div style="text-align: center;">
+          <h3>${resultData.emoji} En baskın kişilik özelliğiniz: <strong>${resultData.label}</strong></h3>
+          <p>${resultData.description}</p>
+        </div>
+      `;
+    } else {
+      document.getElementById("result").innerHTML = "<p>Sonuç bulunamadı. Lütfen testi tekrar yapınız.</p>";
+    }
+  </script>
+</body>
+</html>

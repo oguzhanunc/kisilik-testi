@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kişilik Testi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Kişilik Testi</h1>
+    <form id="quizForm">
+        <label for="name">Adınız:</label>
+        <input type="text" id="name" name="name" required><span id="nameError" class="error"></span><br><br>
+
+        <label for="email">E-posta:</label>
+        <input type="email" id="email" name="email" required><span id="emailError" class="error"></span><br><br>
+
+        <p>1. Yeni insanlarla tanışmak size nasıl hissettirir?</p>
+        <input type="radio" name="q1" value="Enerjik" required> Enerjik<br>
+        <input type="radio" name="q1" value="Nötr"> Nötr<br>
+        <input type="radio" name="q1" value="Endişeli"> Endişeli<br><br>
+
+        <p>2. Sorunlarla karşılaştığınızda ilk tepkiniz nedir?</p>
+        <input type="radio" name="q2" value="Hemen çözüm üretirim" required> Hemen çözüm üretirim<br>
+        <input type="radio" name="q2" value="Bir süre düşünürüm"> Bir süre düşünürüm<br>
+        <input type="radio" name="q2" value="Çekilirim"> Çekilirim<br><br>
+
+        <p>3. Boş zamanlarınızda en çok ne yaparsınız?</p>
+        <input type="radio" name="q3" value="Arkadaşlarla vakit geçirmek" required> Arkadaşlarla vakit geçirmek<br>
+        <input type="radio" name="q3" value="Tek başıma kitap okumak"> Tek başıma kitap okumak<br>
+        <input type="radio" name="q3" value="Yeni hobiler denemek"> Yeni hobiler denemek<br><br>
+
+        <p>4. Stresli durumlarda nasıl davranırsınız?</p>
+        <input type="radio" name="q4" value="Soğukkanlı kalırım" required> Soğukkanlı kalırım<br>
+        <input type="radio" name="q4" value="İçime kapanırım"> İçime kapanırım<br>
+        <input type="radio" name="q4" value="Hemen bir destek ararım"> Hemen bir destek ararım<br><br>
+
+        <p>5. Bir projede çalışırken hangi rolü üstlenirsiniz?</p>
+        <input type="radio" name="q5" value="Liderlik yaparım" required> Liderlik yaparım<br>
+        <input type="radio" name="q5" value="Destek olurum"> Destek olurum<br>
+        <input type="radio" name="q5" value="Arka planda kalırım"> Arka planda kalırım<br><br>
+
+        <button type="submit">Gönder</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
