@@ -76,7 +76,6 @@ document.addEventListener("DOMContentLoaded", function () {
             email: emailInput.value,
             result
         };
-        localStorage.setItem("quizResult", JSON.stringify(resultData));
-        window.location.href = "result.html";
+        window.location.href = `result.html?name=${encodeURIComponent(nameInput.value)}&result=${encodeURIComponent(result)}`;
     });
 });
